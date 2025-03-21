@@ -1,28 +1,63 @@
-.container {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-  font-family: Arial, sans-serif;
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
-input, select, button {
-  margin: 10px;
-  padding: 10px;
-  font-size: 16px;
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #00d4ff; /* Highlighted top for clockwise effect */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+.app-container {
+  width: 600px;
+  height: 650px;
+  background-color: grey;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  overflow-y: auto;
 }
 
 button {
-  background-color: #4CAF50;
+  width: 300px;
+  margin: 5px auto;
+  display: block;
+}
+
+.custom-file-input {
+  display: none;
+}
+
+.custom-file-label {
+  background-color: blue;
   color: white;
-  border: none;
+  padding: 8px;
   cursor: pointer;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
 }
 
-button:hover {
-  background-color: #45a049;
-}
-
-video {
-  width: 100%;
-  margin-top: 20px;
+.custom-file-label:hover {
+  background-color: darkblue;
 }
