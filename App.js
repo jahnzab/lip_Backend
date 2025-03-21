@@ -339,10 +339,10 @@ const App = () => {
   return (
     <div className="container d-flex justify-content-center align-items-center">
       <div className="app-container">
-        <h2 className="text-white text-center" style={{backgroundColor:"blue",color:"white"}}>Real-Time Lip-Sync Generator</h2>
+        <h2 className="text-white text-center" style={{backgroundColor:"blue",color:"white",marginTop:"8px"}}>Real-Time Lip-Sync Generator</h2>
 
         <div className="form-group">
-          <h3 style={{backgroundColor:"blue",color:"white"}}>Upload Image:</h3>
+          <h3 style={{color:"white",marginTop:"5px"}}>Upload Image:</h3>
           <input type="file" accept="image/*" style={{marginLeft:"-50px",}} onChange={handleImageChange} />
           {imagePreview && <img src={imagePreview} alt="Uploaded" style={{ maxWidth: "530px", maxHeight: "400px",display:"flex",alignItems:"center",marginLeft:"120px"}} />}
         </div>
